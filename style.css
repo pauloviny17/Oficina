@@ -1,0 +1,66 @@
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    scroll-behavior: smooth;
+    padding-top: 70px; /* espaço para navbar fixa */
+}
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600') center/cover;
+}
+
+.card-servico {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid transparent !important;
+}
+
+.card-servico:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15) !important;
+    border-bottom-color: #dc3545 !important;
+}
+
+.card-servico i {
+    transition: transform 0.3s ease;
+}
+
+.card-servico:hover i {
+    transform: scale(1.15);
+}
+
+section {
+    scroll-margin-top: 70px;
+}
+
+.form-control {
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.btn-danger {
+    transition: transform 0.3s ease;
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+}
+
+.sobre-img i {
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .sobre-img i { font-size: 6rem !important; }
+}
